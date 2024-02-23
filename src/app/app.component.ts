@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TestComponentComponent } from './test-component/test-component.component';
+import { TestComponent } from './test/test-component';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { TestComponentComponent } from './test-component/test-component.componen
   styleUrl: './app.component.scss',
   standalone: true,
   imports: [
-    TestComponentComponent
+    TestComponent
   ]
 })
 export class AppComponent {
