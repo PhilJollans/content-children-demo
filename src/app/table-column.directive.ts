@@ -1,10 +1,11 @@
 import { Directive, TemplateRef, Input } from '@angular/core';
 
 @Directive({
-  selector: '[tableColumn]'
+  selector: '[tableColumn]',
+  standalone: true,
 })
 export class TableColumnDirective 
 {
-  constructor(public readonly template: TemplateRef<any>) { }
-  @Input('tableColumn') columnName: string = '';
+  constructor() { }
+  @Input('columnName') columnName: string = '';
 }

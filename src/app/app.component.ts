@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { TestComponent } from './test/test-component';
+import { TableColumnDirective } from './table-column.directive';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,9 @@ import { TestComponent } from './test/test-component';
   styleUrl: './app.component.scss',
   standalone: true,
   imports: [
-    TestComponent
+    TestComponent,
+    CommonModule,
+    TableColumnDirective,
   ]
 })
 export class AppComponent {

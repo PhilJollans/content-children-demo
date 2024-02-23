@@ -1,8 +1,19 @@
 <my-table>
-  <ng-template tableColumn="firstname" let-firstname>
-    <h1>this template is for column firstName</h1>
- </ng-template>
- <ng-template tableColumn="lastName" let-lastname>
-    <h1>this template is for column lastName</h1>
- </ng-template>
+   <!-- Method A -->
+   <h1 tableColumn [columnName]="'firstName'">this template is for column firstName</h1>
+
+   <!-- Method B -->
+   <ng-template [ngIf]="true" tableColumn [columnName]="'lastName'">
+       <h1>this template is for column lastName</h1>
+   </ng-template>
+
+   <!-- Test A -->
+   <ng-template [ngIf]="true" tableColumn="test1" let-test1>
+       <h1>this template is for column test1</h1>
+   </ng-template>
+
+   <!-- Test B -->
+   <ng-template tableColumn="test2" let-test2>
+       <h1>this template is for column test2</h1>
+   </ng-template>
 </my-table>
